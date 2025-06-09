@@ -13,4 +13,29 @@ img {
     height: auto;
 }
 
+body {
+    min-height: 100vh;
 
+    --primary-color: #fff;
+    --light-primary-color: #fff;
+    --dark-primary-color: #fff;
+}
+
+.about-me > .portrait {
+    position: relative;
+    width: 400px;
+}
+
+.about-me > .portrait > h1 {
+    position: absolute;
+    bottom: 1rem;
+
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.about-me > .portrait > img {
+    width: 100%;
+    height: auto;
+}
