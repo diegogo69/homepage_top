@@ -2,3 +2,15 @@
     margin: 0;
     padding: 0;
 }
+
+svg {
+    width: 32px;
+    height: auto;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+
