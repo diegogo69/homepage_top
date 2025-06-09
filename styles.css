@@ -24,14 +24,20 @@ body {
     --dark-primary-color: #fff;
 }
 
+.about-me {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
 .about-me > .portrait {
     position: relative;
-    width: 400px;
 }
 
 .about-me > .portrait > h1 {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0rem;
 
     font-size: 1.6rem;
     width: 100%;
@@ -61,6 +67,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: .8rem;
+    padding: 1rem;
 }
 
 .projects > h2 {
@@ -79,11 +86,13 @@ body {
 
 .project .header > .links {
     display: flex;
+    gap: .4rem;
 }
 
 footer > .thumbnail img {
     width: 100%;
     height: auto;
+
 }
 
 footer > .contact-info {
@@ -97,4 +106,9 @@ footer > .contact-info {
     display: flex;
     gap: .8rem;
     align-items: center;
+}
+
+.contact-info .links {
+    justify-content: center;
+    gap: .8rem;
 }
