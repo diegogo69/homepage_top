@@ -39,3 +39,17 @@ body {
     width: 100%;
     height: auto;
 }
+
+.about-me > .description {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.about-me > .description > h2 {
+    text-align: center;
+}
+
+.about-me > .description > .links {
+    display: flex;
+    justify-content: center;
+}
