@@ -170,8 +170,9 @@ footer>.contact-info {
 
     .about-me {
         display: block;
-        /* max-width: 500px; */
-        width: clamp(400px, 380px + 25vw, 600px);
+        /* width: clamp(400px, 380px + 25vw, 600px); */
+        max-width: 600px;
+        width: max(400px, 380px + 25vw);
         /* width: calc(100vw - 8rem); */
         margin-top: 6rem;
         padding: 1rem;
@@ -226,4 +227,41 @@ footer>.contact-info {
     .contact-info .links {
         justify-content: start;
     }
+}
+
+@media (min-width: 1000px) {
+    .about-me {
+        max-width: 850px;
+        height: 250px;
+
+    }
+
+    .about-me .portrait img {
+        transform-origin: left;
+        transform: scale(1) translateX(0);
+        height: 100%;
+    }
+
+    .about-me .portrait {
+        isolation: isolate;
+
+        height: 100%;
+        width: auto;
+        margin-right: 7rem;
+        position: relative;
+
+        transform-origin: left;
+        transform: translateX(-1rem) scale(1.5);
+    }
+
+    .about-me .portrait h1 {
+        transform: translateY(0);
+        top: unset;
+        right: unset;
+        bottom: 0;
+        /* left: 0; */
+        z-index: 3;
+    } 
+    
+
 }
