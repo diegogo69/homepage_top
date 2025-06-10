@@ -235,33 +235,39 @@ footer>.contact-info {
 }
 
 @media (min-width: 1000px) {
-    .about-me {
-        max-width: 850px;
-        width: max(600px, 580px + 25vw);
-        height: 250px;
+    header {
+        height: 100svh;
+        display: grid;
+        place-content: center;
+    }
 
+    .about-me {
+        margin: 0;
+        max-width: none;
+        width: max(600px, 580px + 25vw);
     }
 
     .about-me .portrait img {
-        transform-origin: left;
         transform: scale(1) translateX(0);
         height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
-
+    
     .about-me .portrait {
         height: 100%;
-        width: auto;
-        margin-right: 7rem;
-        position: relative;
+        width: 40%;
+        margin-right: 10%;
 
-        transform-origin: left;
-        transform: translateX(-1rem) scale(1.5);
+        position: relative;
+        transform-origin: left center;
+        transform: translateX(-1rem) scale(1.2);
     }
 
     .about-me .portrait h1 {
-        transform: translateY(0);
+        transform: translate(50%, 0);
         top: unset;
-        right: unset;
+        right: 50%;
         bottom: 0;
         z-index: 3;
     } 
