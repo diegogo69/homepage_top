@@ -30,7 +30,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vw;
     background-color: var(--primary-color);
     transform: skewY(-25deg) translateY(-50%);
@@ -232,6 +232,7 @@ footer>.contact-info {
 @media (min-width: 1000px) {
     .about-me {
         max-width: 850px;
+        width: max(600px, 580px + 25vw);
         height: 250px;
 
     }
@@ -243,8 +244,6 @@ footer>.contact-info {
     }
 
     .about-me .portrait {
-        isolation: isolate;
-
         height: 100%;
         width: auto;
         margin-right: 7rem;
@@ -259,9 +258,20 @@ footer>.contact-info {
         top: unset;
         right: unset;
         bottom: 0;
-        /* left: 0; */
         z-index: 3;
     } 
     
+    .projects-wrapper {
+        --project-width: 250px;
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--project-width), 1fr));
+        grid-auto-rows: max-content;
+    }
+
+    .project {
+        width: 100%;
+    }
 
 }
