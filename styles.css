@@ -22,6 +22,11 @@ body {
     --light-shadow: #00000030;
 }
 
+
+svg path {
+    fill: var(--dark-primary-color)
+}
+
 header {
     position: relative;
 }
@@ -280,7 +285,14 @@ footer>.contact-info {
     }
 
     footer .thumbnail {
+        /* max-width: 600px; */
+        /* Not a max width but a max height */
         padding: 1rem;
+    }
+
+    footer .thumbnail img {
+        max-height: 420px;
+        object-fit: contain;
     }
 
 }
