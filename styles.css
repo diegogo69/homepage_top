@@ -54,7 +54,6 @@ header {
 .about-me .portrait {
     position: relative;
     box-shadow: 0 0 15px var(--light-shadow);
-    height: min-content;
 }
 
 .about-me .portrait h1 {
@@ -171,7 +170,9 @@ footer>.contact-info {
 
     .about-me {
         display: block;
-        width: calc(100vw - 8rem);
+        /* max-width: 500px; */
+        width: clamp(400px, 380px + 25vw, 600px);
+        /* width: calc(100vw - 8rem); */
         margin-top: 6rem;
         padding: 1rem;
         box-shadow: 3px 5px 15px var(--light-shadow)
@@ -183,8 +184,8 @@ footer>.contact-info {
 
     .about-me .portrait {
         position: static;
-        width: 50%;
-        float: inline-start;
+        width: clamp(200px, 50% - 2rem, 240px);
+        float: left;
         box-shadow: none;
     }
     
