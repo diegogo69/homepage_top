@@ -274,4 +274,13 @@ footer>.contact-info {
         width: 100%;
     }
 
+    footer {
+        align-items: start;
+        padding: 2rem;
+    }
+
+    footer .thumbnail {
+        padding: 1rem;
+    }
+
 }
