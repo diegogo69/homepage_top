@@ -5,7 +5,7 @@
 
 svg {
     width: 32px;
-    height: auto;
+    height: 32px;
 }
 
 img {
@@ -16,7 +16,7 @@ img {
 body {
     min-height: 100vh;
 
-    --primary-color: #38bdf8;
+    --primary-color: #0ea5e9;
     --light-primary-color: #fff;
     --dark-primary-color: #262626;
     --light-shadow: #00000030;
@@ -107,6 +107,12 @@ header {
     width: var(--project-width);
     box-shadow: 0 0 15px var(--light-shadow);
 
+    transition: transform .8s .1s ease;
+
+}
+
+.project:hover {
+    transform: translateY(-.8rem);
 }
 
 .project .thumbnail {
@@ -130,6 +136,12 @@ header {
     gap: .4rem;
 }
 
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
 footer>.thumbnail img {
     width: 100%;
     height: auto;
@@ -150,9 +162,35 @@ footer>.contact-info {
     align-items: center;
 }
 
+.contact-info svg {
+    flex-shrink: 0;
+}
+
+.contact-info > div:not(.links) svg path {
+    fill: #fff;
+}
+
 .contact-info .links {
     justify-content: center;
     gap: .8rem;
+}
+
+.contact-info .links svg:hover {
+    animation: 1s .1s ease icon-turn;
+}
+
+@keyframes icon-turn {
+    from {
+        rotate: 0turn;
+    }
+
+    75% {
+        rotate: 1.1turn;
+    }
+
+    to {
+        rotate: 1turn;
+    }
 }
 
 @media (min-width: 600px) {
@@ -175,6 +213,7 @@ footer>.contact-info {
         position: static;
         width: clamp(200px, 50% - 2rem, 240px);
         float: left;
+        margin-right: 1rem;
         box-shadow: none;
     }
     
@@ -188,7 +227,7 @@ footer>.contact-info {
 
     .about-me .portrait img {
         transform-origin: bottom right;
-        transform: scale(1.2) translateX(-.6rem);
+        transform: scale(1.2);
         box-shadow: 0 0 10px var(--light-shadow);
     }
 
@@ -217,8 +256,6 @@ footer>.contact-info {
     footer {
         display: flex;
         align-items: center;
-
-        background-color: var(--primary-color);
     }
 
     footer .thumbnail {
