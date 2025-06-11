@@ -151,6 +151,7 @@ header {
 footer {
     background-color: var(--primary-color);
     color: var(--light-primary-color);
+    padding: 1rem 0;
 }
 
 
@@ -178,7 +179,7 @@ footer>.contact-info {
     flex-shrink: 0;
 }
 
-.contact-info > div:not(.links) svg path {
+.contact-info>div:not(.links) svg path {
     fill: var(--light-primary-color);
 }
 
@@ -191,6 +192,29 @@ footer>.contact-info {
     animation: 1s .1s ease icon-turn;
 }
 
+footer .image-credits {
+    width: 100%;
+    text-align: center;
+}
+
+a[target="_blank"]:not(:has(svg))::after {
+    display: inline-block;
+    height: 1lh;
+    width: 1lh;
+    vertical-align: -.2lh;
+    content: url("data:image/svg+xml; utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Eopen-in-new%3C/title%3E%3Cpath d='M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z' /%3E%3C/svg%3E");
+}
+
+/* 
+a[target="_blank"]:not(:has(svg))::after {
+    display: inline-block;
+    content: " ";
+    height: 1lh;
+    width: 1lh;
+    vertical-align: -.2lh;
+    background-image: url("data:image/svg+xml; utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Eopen-in-new%3C/title%3E%3Cpath d='M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z' /%3E%3C/svg%3E");
+}
+ */
 
 @media (min-width: 600px) {
     .about-me {
@@ -202,7 +226,7 @@ footer>.contact-info {
         box-shadow: 3px 5px 15px var(--light-shadow)
     }
 
-    .about-me > * + * {
+    .about-me>*+* {
         margin-top: 1rem;
     }
 
@@ -213,7 +237,7 @@ footer>.contact-info {
         margin-right: 1rem;
         box-shadow: none;
     }
-    
+
     .about-me .portrait h1 {
         top: 0;
         right: 1rem;
@@ -254,6 +278,7 @@ footer>.contact-info {
     footer {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     footer .thumbnail {
@@ -263,6 +288,10 @@ footer>.contact-info {
 
     footer .contact-info {
         flex: 1;
+    }
+
+    footer .image-credits {
+        flex-shrink: 0;
     }
 
     .contact-info .links {
@@ -289,7 +318,7 @@ footer>.contact-info {
         width: 100%;
         object-fit: cover;
     }
-    
+
     .about-me .portrait {
         height: 100%;
         width: 40%;
@@ -307,8 +336,8 @@ footer>.contact-info {
         bottom: 0;
         z-index: 3;
         color: var(--dark-primary-color);
-    } 
-    
+    }
+
     .projects-wrapper {
         --project-width: 250px;
     }
